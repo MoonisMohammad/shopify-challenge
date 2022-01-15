@@ -1,0 +1,26 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Inventory</h1>
+
+<div id="items">
+  <% @items.each do |item| %>
+  <div id="<%= dom_id item %>">
+
+    
+      <%= image_tag(item.image, style:'width:10%') %>
+    
+      <strong>Name:</strong>
+      <%= item.name %>
+    
+      <strong>| Category:</strong>
+      <%= item.category %>
+    
+      <strong>| Quantity:</strong>
+      <%= item.quantity %>
+    
+      <strong>|</strong>
+      <%= link_to "Show this item", item %>
+  <% end %>
+</div>
+<br>
+<%= link_to "New item", new_item_path %>
