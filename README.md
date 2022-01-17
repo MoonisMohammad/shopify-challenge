@@ -7,10 +7,17 @@ https://docs.google.com/document/d/1z9LZ_kZBUbg-O2MhZVVSqTmvDko5IJWHtuFmIu_Xg1A/
 ## About this repo
 
 Build an inventory tracking web application for a logistics company.
+Requirements:
+1. Basic CRUD Functionality. You should be able to:
+2. Create inventory items
+3. Edit Them
+4. Delete Them
+5. View a list of them
+
 
 ### Additional feature / requirement implemented
 
-Allow image uploads AND store image with generated thumbnails
+Push a button export product data to a CSV
 
 ## Tech stack / framework used
 
@@ -57,5 +64,6 @@ Run the server and open the web application in a Chrome browser where it was tes
 
 ## Contact
 
-Moonis
+Moonis Mohammad
+moonizmohammad@gmail.com
 
