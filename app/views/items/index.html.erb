@@ -1,0 +1,24 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Inventory</h1>
+
+<div id="items">
+  <% @items.each do |item| %>
+  <div id="<%= dom_id item %>">
+    
+      <strong>Name:</strong>
+      <%= item.name %>
+    
+      <strong>| Category:</strong>
+      <%= item.category %>
+    
+      <strong>| Quantity:</strong>
+      <%= item.quantity %>
+    
+      <strong>|</strong>
+      <%= link_to "Show this item", item %>
+  <% end %>
+</div>
+<br>
+<%= link_to "New item", new_item_path %>
+<%= button_to "Export All Products", "/items.csv",method: :get %>
