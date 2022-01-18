@@ -52,26 +52,54 @@ Main Source - https://gorails.com/setup/osx/11-big-sur
 5. Install all dependencies - Run ```bundle install``` on command prompt
 6. Run ```rails db:migrate```
 7. Run server by executing ```rails s```
-8. Open the url shown on the command prompt after running above command in Chrome browser to access the application
-
-## Running the application
-
-1. Open the Terminal and ``cd`` into the folder where you want to keep this project locally on your system
-2. Install all dependencies - Run ```bundle install``` on command prompt
-3. Run ```rails db:migrate```
-4. Run server by executing ```rails s```
-5. Open the url shown on the command prompt after running above command in Chrome browser to access the application
-## Guiding principles
-
-Will add some overarching principles
+8. Open the url shown on the command prompt after running above command in Chrome browser to access the application (http://localhost:3000/)
 
 ## How to use this project
 
-Run the server and open the web application in a Chrome browser where it was tested
+### Inventory Page
+
+This page displays all the items on you inventory and is the home page 
+1. Clicking on ```Show this Item``` takes you to that item's page
+2. Clicking on ```New Item``` takes you to new item page
+3. Clicking on ```Export CSV``` button downloads inventory in csv format
+
+### New item page
+
+This page showse form for creating an new item all fields are necessary for submission of form
+1. Clicking on ```Create Item``` button creates a new item with given attributes
+2. Clicking on ```Back to items``` takes you to inventory page
+
+### Item Page
+
+This page shows details for a specific item
+1. Clicking on ```Edit this item``` takes you to the edit page
+2. Clicking on ```Back to items``` takes you to inventory page
+3. Clicking on ```Delete item``` button deletes the item
+
+### Edit Page
+
+This page shows the form for editing an already existing item
+1. Clicking on ```Update Item``` button updates item with given attributes
+2. Clicking on ```Back to items``` takes you to inventory page
+
+## Testing
+1. ```cd``` into the project folder ```shopify-challenge```
+2. Run command bin/rails test
+3. The controller test results will be prompted on the command line
+
+## Guiding principles
+
+This project was designed with model-view-controller (MVC)  design pattern. The MVC  design pattern separates an application into the following components:
+
+- Models for handling data and business logic 
+- Controllers for user interface and application logic
+- Views for handling graphical user interface objects and presentation
 
 ## Contact
 
 Moonis Mohammad
 
 moonizmohammad@gmail.com
+
+https://www.linkedin.com/in/moonis-mohammad/
 
