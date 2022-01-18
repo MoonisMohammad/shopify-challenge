@@ -20,5 +20,7 @@
   <% end %>
 </div>
 <br>
+<%= button_to "Export to CSV", "/items.csv",method: :get %>
+<br>
 <%= link_to "New item", new_item_path %>
-<%= button_to "Export All Products", "/items.csv",method: :get %>
+

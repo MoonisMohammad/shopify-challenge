@@ -1,16 +1,23 @@
 class Item < ApplicationRecord
-	validates :name, presence: true
-	validates :quantity, presence: true
-	validates :category, presence: true
-	validates :description,presence: true
-	
+
+	# validates that all attributes are present when creating item
+	validates :name, :quantity, :category, :presence, :description, :presence => true
+
+	#This method takes a set of attributes and creates a csv 
 	def self.to_csv
-	    attributes = %w{name category description quantity} # {"name","category,"description","quantity"} 
+
+		# converts attribute name to array
+	    attributes = %w{name category description quantity} 
 	    CSV.generate(headers: true) do |csv|
-	      csv << attributes                                 #"name,category,description,quantity"               
-	      all.each do |item|
-	        csv << item.attributes.values_at(*attributes) #only grabs values skipping keys 
-	      end
+
+	    	#adds attribute names to top of csv
+	    	csv << attributes 
+
+	    	#adds attribute values to csv file                                              
+	    	all.each do |item|
+	        	csv << item.attributes.values_at(*attributes) 
+	      	end
+
 	    end
 	end
 end
